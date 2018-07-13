@@ -4,6 +4,7 @@ package cl.inacap.domain;
  *
  * @author emilio
  */
-public class Usuario {
-    
+public enum TipoCuenta {
+
+    CORRIENTE, VISTA, AHORRO
 }
