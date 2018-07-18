@@ -19,6 +19,7 @@ public class Cliente implements Serializable {
     private Integer rut;
     private String nombre;
     private String apellido;
+    private String pass;
     private String email;
     private Integer cel;
 

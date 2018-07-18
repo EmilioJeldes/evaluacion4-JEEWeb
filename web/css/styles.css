@@ -1,0 +1,15 @@
+body {
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    padding-top: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
