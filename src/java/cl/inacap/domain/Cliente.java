@@ -1,8 +1,10 @@
 package cl.inacap.domain;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import lombok.Data;
 
 /**
@@ -22,5 +24,8 @@ public class Cliente implements Serializable {
     private String pass;
     private String email;
     private Integer cel;
+
+    @OneToOne(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private Cuenta cuenta;
 
 }

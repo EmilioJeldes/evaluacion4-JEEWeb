@@ -22,6 +22,7 @@ public class ClienteMapperImpl implements ClienteMapper {
         String apellido = request.getParameter("apellido");
         String email = request.getParameter("email");
         String contraseña = request.getParameter("password");
+
         @Nullable
         int cel = Integer.parseInt(request.getParameter("cel"));
 
@@ -44,6 +45,7 @@ public class ClienteMapperImpl implements ClienteMapper {
         if (request.getParameter("cel") != null) {
             dto.setCel(cel);
         }
+
         return dto;
 
     }

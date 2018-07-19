@@ -10,4 +10,5 @@ import javax.ejb.Local;
 @Local
 public interface CuentaDAO extends DAO<Cuenta> {
 
+    Cuenta findBydClientId(int id) throws Exception;
 }

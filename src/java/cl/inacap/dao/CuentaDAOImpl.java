@@ -40,4 +40,12 @@ public class CuentaDAOImpl implements CuentaDAO {
         em.merge(entity);
     }
 
+    @Override
+    public Cuenta findBydClientId(int id) throws Exception {
+        //("SELECT DISTINCT p FROM Producto p JOIN p.categorias c WHERE c.idCategoria = :id ORDER BY p.idProducto")
+        return (Cuenta) em.createQuery("SELECT c FROM Cuenta c JOIN c.cliente cl WHERE cl.rut = :id ")
+                .setParameter("id", id)
+                .getSingleResult();
+    }
+
 }

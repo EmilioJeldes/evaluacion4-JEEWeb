@@ -85,6 +85,7 @@ public class ClienteController extends HttpServlet {
                     if (dto != null) {
                         loged = true;
                         request.getSession().setAttribute("loged", loged);
+                        request.getSession().setAttribute("cliente", dto);
                         response.sendRedirect("/cuenta");
                     } else {
                         loged = false;

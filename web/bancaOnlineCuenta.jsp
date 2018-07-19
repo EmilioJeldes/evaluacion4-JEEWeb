@@ -55,21 +55,57 @@
         </header>
 
         <!-- SIDE NAV -->
-        <jsp:include page="WEB-INF/dynamic/sidenav_crear_cuenta.jsp" />
+        <jsp:include page="WEB-INF/dynamic/sidenav_cuenta.jsp" />
         <!-- SIDE NAV END -->
 
         <!-- MAIN START -->
         <main class="main">
-            <div class="container">
-                <div class="row">
+            <div class="">
+                <div class="row container">
                     <div class="col s10 push-m1">
                         <div class="img-container">
                             <img src="img/pexels-photo-938965.jpeg" class="img-bancaOnline" alt="imagen del banco">
                             <img src="img/logo.png" class="logo-bancaOnline index" alt="imagen del logo">
                         </div>
-                        <h4>Bienvenido <c:out value="${cliente.getNombre()} ${cliente.getApellido()}" /></h4>
-                        <br>
-                        <p>Aún no tienes una cuenta asociada. <a class="deep-purple-text lighten-1" href="/crear-cuenta">Crea una aquí</a></p>
+                    </div>
+
+                </div>
+                <div class="row container">
+                    <div class="col s12">
+                        <h4 class="">Bienvenido <c:out value="${cliente.getNombre()} ${cliente.getApellido()}" /></h4>
+                        <table class="striped centered">
+                            <thead>
+                                <tr>
+                                    <th>Saldo</th>
+                                    <th>Nº Cuenta</th>
+                                    <th>Rut</th>
+                                    <th>Fecha Apertura</th>
+                                    <th>Tipo Cuenta</th>
+                                    <th>Modificar</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- comment
+                                    private Integer numeroCuenta;
+    private Date fechaApertura;
+    private TipoCuenta tipoCuenta;
+    private ClienteDTO cliente;
+    private Integer saldoDisponible;
+
+                                -->
+                            <input type="hidden" value="<c:out value="${cuenta.getNumeroCuenta()}" />" name="idProducto">
+                            <tr>
+                                <td><c:out value="$${cuenta.getSaldoDisponible()}" /></td>
+                                <td><c:out value="${cuenta.getNumeroCuenta()}" /></td>
+                                <td><c:out value="${cliente.getRut()}" /></td>
+                                <td><c:out value="${cuenta.getFechaApertura()}" /></td>
+                                <td><c:out value="${cuenta.getTipoCuenta().toString()}" /></td>
+                                <td><button type="submit" class="btn-icon" name="btn" value="Modificar"><i class="material-icons pointer">edit</i></button></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

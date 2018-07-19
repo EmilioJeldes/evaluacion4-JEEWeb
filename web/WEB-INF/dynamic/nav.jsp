@@ -2,7 +2,6 @@
 <%
     String select = request.getParameter("select");
 %>
-<!-- NAV -->
 <nav class="grey lighten-5">
     <div class="nav-wrapper container black-text" style="max-height: 100%; max-width: 100%;">
         <a href="/" class="brand-logo"><img class="logo" src="/img/logo.png" alt="Logo image"></a>

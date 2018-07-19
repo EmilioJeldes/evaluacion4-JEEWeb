@@ -2,6 +2,16 @@ body {
     position: relative;
 }
 
+.header, .main, .footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    .header, .main, .footer {
+        padding-left: 0;
+    }
+}
+
 .logo {
     height: 50px;
     padding-top: 10px;
@@ -13,3 +23,14 @@ body {
     justify-content: center;
 }
 
+.li-flex {
+    margin-left: 50px;
+}
+
+.mt {
+    margin-top: 100px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}

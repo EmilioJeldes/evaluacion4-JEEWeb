@@ -18,4 +18,6 @@ public interface CuentaService {
 
     void removeCuenta(int id);
 
+    CuentaDTO findByClient(int id);
+
 }

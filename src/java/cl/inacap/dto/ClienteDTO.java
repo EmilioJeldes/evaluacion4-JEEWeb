@@ -15,5 +15,6 @@ public class ClienteDTO {
     private String pass;
     private String email;
     private Integer cel;
+    private CuentaDTO cuenta;
 
 }
